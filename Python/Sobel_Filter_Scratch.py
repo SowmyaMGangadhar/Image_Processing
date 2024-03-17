@@ -24,9 +24,7 @@ def sobel_filter(img):
         for j in range(col-2):
             gx = np.sum(np.multiply(sobel_x, grey[i:i+3, j:j+3]))
             gy = np.sum(np.multiply(sobel_y, grey[i:i+3, j:j+3]))
-            # print(gx,gy)
             sob[i+1, j+1] = np.sqrt(gx**2 + gy**2)
-            # print(sob)
             
     sob = cv2.normalize(sob, None, 0, 255, cv2.NORM_MINMAX)
     sob = sob.astype(np.uint8)
