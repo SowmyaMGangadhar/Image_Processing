@@ -12,13 +12,13 @@ def sobel_filter(img):
     [row, col] = np.shape(grey)
     print(row, col)
     sob = np.zeros(shape=(row, col), dtype=np.float64)
-    
+
     # array = np.array([[1,2,3,4,5,6,7,8,9,0],[0,9,8,7,6,5,4,3,2,1],[2,1,3,4,2,5,67,8,9,2], [77,2,211,55,77,88,99,23,66,73]])
     # print(array[0:0+3, 0:0+3])
     # print(grey[0:0+3,0:0+3])
     # gx = np.sum(np.multiply(sobel_x, grey[1:1+3, 1:1+3]))
     # gy = np.sum(np.multiply(sobel_y, grey[1:1+3, 1:1+3]))
-    # print(gr,gy)
+    # print(gx,gy)
     
     
     for i in range(row-2):
